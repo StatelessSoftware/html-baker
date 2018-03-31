@@ -1,5 +1,6 @@
 {
 	"baker": {
+		"precmd": "",
 		"domains": [
 			"localhost:3000"
 		],
@@ -8,15 +9,16 @@
 			"runcmd": "npm start"
 		},
 		"output": {
-			"directory": "./docs"
+			"directory": "./docs",
+			"fixDotOnes": true
 		},
 		"options": [
 			"--recursive",
 			"--page-requisites",
 			"--html-extension",
-			"--convert-links",
 			"--restrict-file-names=windows",
 			"--no-parent"
-		]
+		],
+		"postcmd": ""
 	}
 }
