@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "description": "Convert websites into flat-file websites",
   "main": "index.js",
+  "bin": {
+    "html-baker": "bin/htmlbaker.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "start": "node index.js"
   },
