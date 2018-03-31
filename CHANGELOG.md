@@ -4,5 +4,6 @@
 
 ### Fixes
 
+- [Issue #4] - Default config file outdated
 - [Issue #3] - Readme - Add documentation
 - [Issue #2] - Bin - will not start
