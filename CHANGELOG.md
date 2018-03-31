@@ -4,6 +4,7 @@
 
 ### Additions
 
+- [Issue #6] - Config creator should be able to append to existing config
 
 ### Fixes
 
