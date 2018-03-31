@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/StatelessSoftware/html-baker/issues"
   },
-  "homepage": "https://github.com/StatelessSoftware/html-baker#readme"
+  "homepage": "https://github.com/StatelessSoftware/html-baker#readme",
+  "dependencies": {
+    "command-line-args": "^5.0.2"
+  }
 }
