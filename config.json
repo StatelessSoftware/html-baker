@@ -9,7 +9,8 @@
 			"runcmd": "npm start"
 		},
 		"output": {
-			"directory": "./docs"
+			"directory": "./docs",
+			"fixDotOnes": true
 		},
 		"options": [
 			"--recursive",

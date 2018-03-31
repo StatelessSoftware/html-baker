@@ -1,4 +1,5 @@
 const shell = require("child_process");
+const fs = require("fs");
 
 // Load cli
 let cli = require("./lib/cli")();
@@ -119,6 +120,27 @@ function download() {
             if (config.postcmd && config.postcmd.length) {
                 console.log("Post-cmd:", config.postcmd);
                 shell.execSync(config.postcmd);
+            }
+
+            // Fix dot ones
+            if (config.output && config.output.fixDotOnes) {
+
+                // Scan the directory
+                fs.readdirSync(config.output.directory).forEach(file => {
+                    if (file.includes(".1.html")) {
+
+                        file = config.output.directory + '/' + file;
+                        let newfile = file.replace(".1.html", ".html");
+                        
+                        try {
+                            fs.renameSync(file, newfile);
+                        }
+                        catch (ex) {
+                            throw "Could not move file " + file;
+                        }
+                    }                    
+                });
+
             }
 
             console.log("Done.");

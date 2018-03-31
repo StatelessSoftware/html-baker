@@ -4,6 +4,7 @@
 
 ### Additions
 
+- [Issue #8] - Wget creates .1.html files
 - [Issue #7] - Config should allow for post-command
 - [Issue #6] - Config creator should be able to append to existing config
 

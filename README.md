@@ -29,5 +29,6 @@ To remove the build and rebuild, run `html-baker -f`
     - **runcmd** - Command to run (start) the app. i.e. - `npm start`
 - **output**
     - **directory** - Directory to bake into
+    - **fixDotOnes** - (boolean) If html-baker should convert wget's .1 files to .html files
 - **options** - Array of wget options
 - **postcmd** - A command to run after the build succeeds
