@@ -1,0 +1,30 @@
+{
+  "name": "html-baker",
+  "version": "0.0.1",
+  "description": "Convert websites into flat-file websites",
+  "main": "index.js",
+  "bin": {
+    "html-baker": "bin/htmlbaker.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StatelessSoftware/html-baker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StatelessSoftware/html-baker/issues"
+  },
+  "homepage": "https://github.com/StatelessSoftware/html-baker#readme",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "config": "^1.30.0"
+  }
+}
