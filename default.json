@@ -1,0 +1,22 @@
+{
+    "baker": {
+        "domains": [
+            "localhost:3000"
+        ],
+        "input": {
+            "directory": "./dist",
+            "runcmd": "npm start"
+        },
+        "output": {
+            "directory": "./docs"
+        },
+        "options": [
+            "recursive",
+            "page-requisites",
+            "html-extension",
+            "convert-links",
+            "restrict-file-names=windows",
+            "no-parent"
+        ]
+    }
+}
