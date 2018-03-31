@@ -1,6 +1,6 @@
 {
   "name": "html-baker",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Convert websites into flat-file websites",
   "main": "index.js",
   "bin": {
