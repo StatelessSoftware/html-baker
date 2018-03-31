@@ -4,4 +4,5 @@
 
 ### Fixes
 
+- [Issue #3] - Readme - Add documentation
 - [Issue #2] - Bin - will not start
