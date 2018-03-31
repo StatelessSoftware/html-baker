@@ -1,5 +1,6 @@
 {
 	"baker": {
+		"precmd": "",
 		"domains": [
 			"localhost:3000"
 		],
@@ -17,6 +18,7 @@
 			"--convert-links",
 			"--restrict-file-names=windows",
 			"--no-parent"
-		]
+		],
+		"postcmd": ""
 	}
 }

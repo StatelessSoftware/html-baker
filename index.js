@@ -27,6 +27,12 @@ if (cli.force && config.output && config.output.directory) {
 
 // Start the engine
 
+// Run the precmd
+if (config.precmd && config.precmd.length) {
+    console.log("Pre-cmd:", config.precmd);
+    shell.execSync(config.precmd);
+}
+
 /// Check for input server command
 let server = false;
 let serverStarted = false;
@@ -108,6 +114,13 @@ function download() {
     
         try {
             shell.execSync(wgetcmd);
+
+            // Run the post command
+            if (config.postcmd && config.postcmd.length) {
+                console.log("Post-cmd:", config.postcmd);
+                shell.execSync(config.postcmd);
+            }
+
             console.log("Done.");
         }
         catch (ex) {
