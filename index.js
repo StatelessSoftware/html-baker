@@ -113,7 +113,13 @@ function download() {
         console.log("Running " + wgetcmd);
     
         try {
-            shell.execSync(wgetcmd);
+
+            try {
+                shell.execSync(wgetcmd);
+            }
+            catch (ex) {
+                console.log("Wget exited unexpectedly.  Please check output before committing.");
+            }
 
             // Run the post command
             if (config.postcmd && config.postcmd.length) {
