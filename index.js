@@ -50,20 +50,19 @@ if (config.input && config.input.directory && config.input.runcmd) {
     server.stdout.on("data", (data) => {
         serverStarted = true;
         download();
+        server.kill();
     });
     server.stderr.on("data", (data) => {
         console.log(`Server Error: ${data}`);
-        process.kill();
+        server.kill();
     });
     server.on("close", (code) => {
         console.log(`Server exited with code ${code}`);
-        serverStarted = false;
-        process.kill();
+        process.exit();
     })
     server.on("exit", (code) => {
         console.log(`Server exited with code ${code}`);
-        serverStarted = false;
-        process.kill();
+        process.exit();
     })
 
 }
@@ -114,7 +113,13 @@ function download() {
         console.log("Running " + wgetcmd);
     
         try {
-            shell.execSync(wgetcmd);
+
+            try {
+                shell.execSync(wgetcmd);
+            }
+            catch (ex) {
+                console.log("Wget exited unexpectedly.  Please check output before committing.");
+            }
 
             // Run the post command
             if (config.postcmd && config.postcmd.length) {
@@ -154,10 +159,5 @@ function download() {
         // Server not started
         console.log("Server wasn't started.");
     }
-
-    if (server) {
-        server.kill();
-    }
-    process.exit();
     
 }

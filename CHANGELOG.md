@@ -1,5 +1,12 @@
 # html-baker
 
+## [0.1.1] - 2018-04-03
+
+### Fixes
+
+- [Issue #14] - Bake fails with eternallybored's wget for Windows
+- [Issue #12] - Doesn't properly kill server
+
 ## [0.1.0] - 2018-03-31
 
 ### Additions
