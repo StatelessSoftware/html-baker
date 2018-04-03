@@ -4,6 +4,7 @@
 
 ### Fixes
 
+- [Issue #12] - Doesn't properly kill server
 
 ## [0.1.0] - 2018-03-31
 
